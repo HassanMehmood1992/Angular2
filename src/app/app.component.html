@@ -1,7 +1,54 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<h1>Angular Router</h1>
+<!-- <h1>Angular Router</h1>
+
   <nav>
     <a routerLink="/crisis-center" routerLinkActive="active">Crisis Center</a>
     <a routerLink="/heroes" routerLinkActive="active">Heroes</a>
   </nav>
-  <router-outlet></router-outlet>
+  <router-outlet></router-outlet> -->
+
+  <div class="container">
+    <div class="row">
+      <div class="jumbotron">
+          <h2>Coding Assignment</h2>
+      </div>
+    </div>
+    <router-outlet></router-outlet>
+  </div>
+
+  <!-- <div>
+    <h2><b>Customer Overview</b></h2>
+    <p>
+      <button type="button" class="btn btn-primary" (click)="addCustomer()"> <b>Add New Customer</b></button>
+    </p>
+    <div class="row">
+     <div class="col-md-10">
+        <table class="table table-striped table-bordered">
+          <thead>
+            <tr>
+              <th scope="col" (click)="sort('FirstName')">
+               <span  [hidden]="sortKey=='FirstName'" [class]="{'glyphicon glyphicon-arrow-up':reverse,'glyphicon glyphicon-arrow-down':!reverse}"></span>First Name</th>
+              <th scope="col" (click)="sort('LastName')">
+               <span  [hidden]="sortKey=='LastName'" [class]="{'glyphicon glyphicon-arrow-up':reverse,'glyphicon glyphicon-arrow-down':!reverse}"></span>Last Name</th>
+              <th scope="col">Age</th>
+              <th scope="col">Gender</th>
+              <th scope="col">Options</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let Customer of Customers">
+              <td>{{Customer.FirstName}}</td>
+              <td>{{Customer.LastName}}</td>
+              <td>{{Customer.Birthday  }}</td>
+              <td>{{Customer.Gender}}</td>
+              <td>
+                <button type="button" class="btn btn-primary" (click)="editCustomer(Customer)">Edit</button>
+                <button type="button" class="btn btn-primary"(click)="removeCustomer($index,Customer)">Delete</button>
+                <button type="button" class="btn btn-success" (click)="gotonavigations(Customer)">Navi</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+        </div>
+    </div>
+  </div> -->

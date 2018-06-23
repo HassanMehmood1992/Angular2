@@ -6,18 +6,19 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { HeroListComponent } from './hero-list/hero-list.component';
 import { HeroDetailComponent } from './hero-details/hero-details.component';
 import { CrisisListComponent } from './crisis-list/crisis-list.component';
+import { OverviewComponent } from './overview/overview.component';
 
 
 const appRoutes: Routes = [
   { path: 'crisis-center', component: CrisisListComponent },
   { path: 'hero/:id',      component: HeroDetailComponent },
   {
-    path: 'heroes',
-    component: HeroListComponent,
+    path: 'overview',
+    component: OverviewComponent,
     data: { title: 'Heroes List' }
   },
   { path: '',
-    redirectTo: '/heroes',
+    redirectTo: '/overview',
     pathMatch: 'full'
   },
   { path: '**', component: PageNotFoundComponent }
@@ -29,7 +30,8 @@ const appRoutes: Routes = [
     HeroDetailComponent,
     PageNotFoundComponent,
     CrisisListComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    OverviewComponent
   ],
   imports: [
     RouterModule.forRoot(
